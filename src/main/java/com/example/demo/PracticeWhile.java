@@ -1,14 +1,18 @@
 package com.example.demo;
 
-public class PracticeWhile {
+	public class PracticeWhile {
 
-	public static void main(String[] args) {
-		int num = 101;
+		public static void practiceWhile() {
+			
+			int number = 100; 
+			
+			while (number >= 0) { 
+				
+				System.out.println(number); 
+				
+				number--;  
+			}
 
-		while (num > 0) {
-			--num;
-
-			System.out.println(num);
 		}
+
 	}
-}
