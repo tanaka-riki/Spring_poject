@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<!--html xmlns="http://www.w3.org/1999/xhtml は異なる要素や属性が衝突しないようにするため-->
+<!--xmlns:th="http://www.thymeleaf.org はThymeleafの機能をHTMLテンプレート内で使用できるようにするため-->
+
+<head>
+	<title>動物詳細画面</title>
+	<meta charset="utf-8" />
+</head>
+
+<body>
+	<h1>動物詳細画面</h1>
+	<!--${oooo.xxx} = Thymeleafの式 ooooオブジェクトのxxx-->
+	<div class="animals" th:each="animal : ${hitAnimalsList}">
+		<p th:text="'No: ' + ${animal.id}"></p>
+		<p th:text="'英名: ' + ${animal.name}"></p>
+		<p th:text="'和名: ' + ${animal.japaneseName}"></p>
+		<p th:text="'鳴き声: ' + ${animal.cry}"></p>
+	</div>
+	<form action=animalsSearch method="get">
+		<button type="submit">トップへ</button>
+	</form>
+</body>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>FizzBuzz</title>
+</head>
+
+<body>
+	<h1>FizzBuzz</h1>
+	<ul th:each="item : ${result}">
+		<li th:text="${item}"></li>
+	</ul>
+</body>
+
+</html>
+
+
+<!--th:each Thymeleafの属性、リスト内の要素をループ処理。-->
+
+<!--item ループ処理中の変数値＝ ${result} FizzBuzzServiceのresult-->
+
+<!--${result}はThymeleafの式-->
+
+<!--${item}はulタグのitemの変数値を表示させるため-->
